@@ -15,6 +15,8 @@ val scribeVersion = "3.15.2"
 val scalikejdbcVersion = "4.3.2"
 val flywayVersion = "11.1.0"
 val postgresVersion = "42.7.4"
+val munitVersion = "1.0.3"
+val munitCatsEffectVersion = "2.0.0"
 
 libraryDependencies ++= Seq(
   // cats-effect
@@ -54,7 +56,11 @@ libraryDependencies ++= Seq(
   "org.jsoup" % "jsoup" % "1.18.3",
 
   // config
-  "com.typesafe" % "config" % "1.4.3"
+  "com.typesafe" % "config" % "1.4.3",
+
+  // test
+  "org.scalameta" %% "munit" % munitVersion % Test,
+  "org.typelevel" %% "munit-cats-effect" % munitCatsEffectVersion % Test
 )
 
 scalacOptions ++= Seq(
