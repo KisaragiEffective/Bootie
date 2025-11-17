@@ -1,1 +1,1 @@
-// No additional plugins required for now
+addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.11.0")

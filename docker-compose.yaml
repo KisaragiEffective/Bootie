@@ -1,0 +1,55 @@
+services:
+  postgres:
+    image: postgres:18-alpine
+    container_name: bootie-postgres
+    environment:
+      POSTGRES_DB: bootie
+      POSTGRES_USER: bootie
+      POSTGRES_PASSWORD: bootie
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bootie"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - bootie-network
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bootie-app
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      # Database configuration
+      DATABASE_URL: jdbc:postgresql://postgres:5432/bootie
+      DATABASE_USER: bootie
+      DATABASE_PASSWORD: bootie
+
+      # Misskey configuration
+      MISSKEY_INSTANCE_URL: ${MISSKEY_INSTANCE_URL:-https://misskey.example.com}
+      MISSKEY_TOKEN: ${MISSKEY_TOKEN:-your-misskey-token-here}
+
+      # Posting configuration
+      POSTING_INTERVAL_SECONDS: ${POSTING_INTERVAL_SECONDS:-30}
+      POSTING_PARALLELISM: ${POSTING_PARALLELISM:-1}
+
+      # Java options
+      JAVA_OPTS: "-Xmx512m -Xms256m"
+    networks:
+      - bootie-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  bootie-network:
+    driver: bridge

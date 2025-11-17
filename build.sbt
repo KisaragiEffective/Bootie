@@ -2,9 +2,12 @@ name := "bootie"
 
 version := "0.1.0"
 
-scalaVersion := "3.5.2"
+scalaVersion := "3.7.4"
+
+enablePlugins(JavaAppPackaging)
 
 val catsEffectVersion = "3.5.7"
+val catsRetryVersion = "3.1.3"
 val fs2Version = "3.11.0"
 val http4sVersion = "0.23.30"
 val circeVersion = "0.14.10"
@@ -16,6 +19,7 @@ val postgresVersion = "42.7.4"
 libraryDependencies ++= Seq(
   // cats-effect
   "org.typelevel" %% "cats-effect" % catsEffectVersion,
+  "com.github.cb372" %% "cats-retry" % catsRetryVersion,
 
   // fs2
   "co.fs2" %% "fs2-core" % fs2Version,
