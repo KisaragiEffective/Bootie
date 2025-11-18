@@ -1,9 +1,9 @@
-package com.github.kisaragieffective.bootie.client
+package io.github.kisaragieffective.bootie.client
 
 import cats.effect.Sync
 import cats.syntax.all.*
-import com.github.kisaragieffective.bootie.config.MisskeyConfig
-import com.github.kisaragieffective.bootie.domain.BoothItem
+import io.github.kisaragieffective.bootie.config.MisskeyConfig
+import io.github.kisaragieffective.bootie.domain.BoothItem
 import io.circe.*
 import io.circe.generic.auto.*
 import io.circe.syntax.*

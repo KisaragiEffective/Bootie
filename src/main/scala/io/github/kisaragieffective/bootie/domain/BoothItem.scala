@@ -1,4 +1,4 @@
-package com.github.kisaragieffective.bootie.domain
+package io.github.kisaragieffective.bootie.domain
 
 import java.time.LocalDateTime
 

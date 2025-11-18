@@ -1,9 +1,9 @@
-package com.github.kisaragieffective.bootie.scraper
+package io.github.kisaragieffective.bootie.scraper
 
 import cats.effect.Sync
 import cats.syntax.all.*
-import com.github.kisaragieffective.bootie.config.ScrapingConfig
-import com.github.kisaragieffective.bootie.domain.BoothItem
+import io.github.kisaragieffective.bootie.config.ScrapingConfig
+import io.github.kisaragieffective.bootie.domain.BoothItem
 import org.http4s.client.Client
 import org.http4s.{Request, Uri}
 import org.http4s.headers.`User-Agent`

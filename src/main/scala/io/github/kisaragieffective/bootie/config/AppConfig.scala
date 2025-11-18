@@ -1,4 +1,4 @@
-package com.github.kisaragieffective.bootie.config
+package io.github.kisaragieffective.bootie.config
 
 import com.typesafe.config.ConfigFactory
 import scala.jdk.CollectionConverters.*

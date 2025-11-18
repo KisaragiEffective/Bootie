@@ -1,12 +1,12 @@
-package com.github.kisaragieffective.bootie.service
+package io.github.kisaragieffective.bootie.service
 
 import cats.effect.{IO, Ref}
 import cats.syntax.all.*
-import com.github.kisaragieffective.bootie.client.MisskeyClient
-import com.github.kisaragieffective.bootie.config.{AppConfig, MisskeyConfig, PostingConfig, ScrapingConfig, DatabaseConfig}
-import com.github.kisaragieffective.bootie.domain.BoothItem
-import com.github.kisaragieffective.bootie.repository.BoothItemRepository
-import com.github.kisaragieffective.bootie.scraper.BoothScraper
+import io.github.kisaragieffective.bootie.client.MisskeyClient
+import io.github.kisaragieffective.bootie.config.{AppConfig, MisskeyConfig, PostingConfig, ScrapingConfig, DatabaseConfig}
+import io.github.kisaragieffective.bootie.domain.BoothItem
+import io.github.kisaragieffective.bootie.repository.BoothItemRepository
+import io.github.kisaragieffective.bootie.scraper.BoothScraper
 import fs2.Stream
 import munit.CatsEffectSuite
 import scribe.Scribe

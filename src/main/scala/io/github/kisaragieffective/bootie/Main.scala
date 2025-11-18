@@ -1,13 +1,13 @@
-package com.github.kisaragieffective.bootie
+package io.github.kisaragieffective.bootie
 
 import cats.effect.{ExitCode, IO, IOApp}
 import cats.syntax.all.*
-import com.github.kisaragieffective.bootie.client.MisskeyClientImpl
-import com.github.kisaragieffective.bootie.config.AppConfig
-import com.github.kisaragieffective.bootie.db.DatabaseInitializerImpl
-import com.github.kisaragieffective.bootie.repository.BoothItemRepositoryImpl
-import com.github.kisaragieffective.bootie.scraper.BoothScraperImpl
-import com.github.kisaragieffective.bootie.service.BoothServiceImpl
+import io.github.kisaragieffective.bootie.client.MisskeyClientImpl
+import io.github.kisaragieffective.bootie.config.AppConfig
+import io.github.kisaragieffective.bootie.db.DatabaseInitializerImpl
+import io.github.kisaragieffective.bootie.repository.BoothItemRepositoryImpl
+import io.github.kisaragieffective.bootie.scraper.BoothScraperImpl
+import io.github.kisaragieffective.bootie.service.BoothServiceImpl
 import fs2.Stream
 import org.http4s.ember.client.EmberClientBuilder
 import scribe.Scribe

@@ -1,8 +1,8 @@
-package com.github.kisaragieffective.bootie.repository
+package io.github.kisaragieffective.bootie.repository
 
 import cats.effect.Sync
 import cats.syntax.all.*
-import com.github.kisaragieffective.bootie.domain.BoothItem
+import io.github.kisaragieffective.bootie.domain.BoothItem
 import scalikejdbc.*
 import java.time.LocalDateTime
 

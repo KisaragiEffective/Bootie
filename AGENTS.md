@@ -74,7 +74,7 @@ def findByBoothItemId(boothItemId: String): F[Option[BoothItem]] = {
 Traits define interfaces, and implementation classes are in separate files:
 
 ```
-src/main/scala/com/github/kisaragieffective/bootie/
+src/main/scala/io/github/kisaragieffective/bootie/
 ├── service/
 │   ├── BoothService.scala       # Interface (trait)
 │   └── BoothServiceImpl.scala   # Implementation
@@ -124,7 +124,7 @@ Stream.emits(items)
 bootie/
 ├── src/
 │   ├── main/
-│   │   ├── scala/com/github/kisaragieffective/bootie/
+│   │   ├── scala/io/github/kisaragieffective/bootie/
 │   │   │   ├── Main.scala                    # IOApp entry point (only IO usage)
 │   │   │   ├── client/
 │   │   │   │   ├── MisskeyClient.scala       # Interface
@@ -150,7 +150,7 @@ bootie/
 │   │       └── db/migration/                 # Flyway migrations
 │   │           └── V1__Create_booth_items_table.sql
 │   └── test/
-│       └── scala/com/github/kisaragieffective/bootie/
+│       └── scala/io/github/kisaragieffective/bootie/
 │           └── service/
 │               └── BoothServiceSpec.scala    # Tests
 ├── build.sbt                                 # Build configuration

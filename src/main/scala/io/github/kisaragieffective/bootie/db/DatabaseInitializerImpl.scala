@@ -1,8 +1,8 @@
-package com.github.kisaragieffective.bootie.db
+package io.github.kisaragieffective.bootie.db
 
 import cats.effect.Sync
 import cats.syntax.all.*
-import com.github.kisaragieffective.bootie.config.DatabaseConfig
+import io.github.kisaragieffective.bootie.config.DatabaseConfig
 import org.flywaydb.core.Flyway
 import scalikejdbc.{ConnectionPool, ConnectionPoolSettings}
 import scribe.Scribe

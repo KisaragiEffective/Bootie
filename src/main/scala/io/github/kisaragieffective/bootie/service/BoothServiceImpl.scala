@@ -1,12 +1,12 @@
-package com.github.kisaragieffective.bootie.service
+package io.github.kisaragieffective.bootie.service
 
 import cats.effect.{Sync, Temporal}
 import cats.syntax.all.*
-import com.github.kisaragieffective.bootie.client.MisskeyClient
-import com.github.kisaragieffective.bootie.config.AppConfig
-import com.github.kisaragieffective.bootie.domain.BoothItem
-import com.github.kisaragieffective.bootie.repository.BoothItemRepository
-import com.github.kisaragieffective.bootie.scraper.BoothScraper
+import io.github.kisaragieffective.bootie.client.MisskeyClient
+import io.github.kisaragieffective.bootie.config.AppConfig
+import io.github.kisaragieffective.bootie.domain.BoothItem
+import io.github.kisaragieffective.bootie.repository.BoothItemRepository
+import io.github.kisaragieffective.bootie.scraper.BoothScraper
 import fs2.Stream
 import retry.*
 import retry.RetryPolicies.*

@@ -1,4 +1,4 @@
-package com.github.kisaragieffective.bootie.service
+package io.github.kisaragieffective.bootie.service
 
 import fs2.Stream
 
